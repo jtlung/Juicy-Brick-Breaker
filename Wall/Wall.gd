@@ -9,4 +9,7 @@ func _physics_process(_delta):
 	pass
 
 func hit(_ball):
-	pass
+	var sfx = get_node_or_null("/root/Game/wall")
+	if sfx != null:
+		sfx.pitch_scale = (1+Global.combo/35.0)*randf_range(1,1.015)
+		sfx.play()

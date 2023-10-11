@@ -1,9 +1,9 @@
 [gd_scene load_steps=21 format=3 uid="uid://bw6uill4ctrph"]
 
-[ext_resource type="Texture2D" uid="uid://cbeoyq2naxry" path="res://Assets/star.png" id="1_3qlwl"]
 [ext_resource type="Script" path="res://Effects/BallHit.gd" id="1_cjmdx"]
-[ext_resource type="Texture2D" uid="uid://boh5pl0jb6ywn" path="res://Assets/pill.png" id="2_1rewq"]
-[ext_resource type="Texture2D" uid="uid://c7qfash5hfsf8" path="res://Assets/boom.png" id="2_omuxq"]
+[ext_resource type="Texture2D" uid="uid://c7qfash5hfsf8" path="res://Assets/Images/boom.png" id="2_i110a"]
+[ext_resource type="Texture2D" uid="uid://cbeoyq2naxry" path="res://Assets/Images/star.png" id="3_o2ydx"]
+[ext_resource type="Texture2D" uid="uid://boh5pl0jb6ywn" path="res://Assets/Images/pill.png" id="4_0sbae"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5kmph"]
 particles_animation = true
@@ -115,7 +115,7 @@ material = SubResource("CanvasItemMaterial_5kmph")
 emitting = false
 amount = 1
 process_material = SubResource("ParticleProcessMaterial_tptmm")
-texture = ExtResource("2_omuxq")
+texture = ExtResource("2_i110a")
 lifetime = 0.25
 one_shot = true
 explosiveness = 1.0
@@ -123,7 +123,7 @@ explosiveness = 1.0
 [node name="stars" type="GPUParticles2D" parent="."]
 emitting = false
 process_material = SubResource("ParticleProcessMaterial_jutwl")
-texture = ExtResource("1_3qlwl")
+texture = ExtResource("3_o2ydx")
 lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
@@ -134,7 +134,7 @@ trail_section_subdivisions = 2
 [node name="fwoosh" type="GPUParticles2D" parent="."]
 emitting = false
 process_material = SubResource("ParticleProcessMaterial_u1sce")
-texture = ExtResource("2_1rewq")
+texture = ExtResource("4_0sbae")
 lifetime = 0.5
 one_shot = true
 explosiveness = 1.0

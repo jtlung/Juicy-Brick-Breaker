@@ -50,10 +50,15 @@ func _physics_process(delta):
 		#queue_free()
 
 func hit(ball):
+	Global.hitTime = 1
+	Global.combo += 1
+	var sfx = get_node_or_null("/root/Game/crush")
+	if sfx != null:
+		sfx.pitch_scale = (1+Global.combo/35.0)*randf_range(1,1.015)
+		sfx.play()
 	var bricks = get_node_or_null("/root/Game/Brick_Container")
 	die(ball)
 	if bricks != null:
-		print("shaboinger")
 		for brick in bricks.get_children():
 			if brick.dying != true:
 				var tweenTime = .2*randf_range(.75,1)

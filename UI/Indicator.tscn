@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://dywcp8o4vsibs"]
 
-[ext_resource type="Texture2D" uid="uid://p0uau7icly0b" path="res://Assets/ball_new.png" id="1_m0ign"]
+[ext_resource type="Texture2D" uid="uid://p0uau7icly0b" path="res://Assets/Images/ball_new.png" id="1_qwj43"]
 
 [node name="Indicator" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4, -4)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_m0ign")
+texture = ExtResource("1_qwj43")
 centered = false

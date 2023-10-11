@@ -24,6 +24,10 @@ func _input(event):
 		target.x += event.relative.x
 
 func hit(ball):
+	var sfx = get_node_or_null("/root/Game/boing")
+	if sfx != null:
+		sfx.pitch_scale = (1+(ball.linear_velocity.length()/1800))*randf_range(1,1.5)
+		sfx.play()
 	var dir = ball.position.direction_to(position)
 	var magnitude = ball.linear_velocity.length()/20
 	var targetPos = $Sprites.position+dir*magnitude

@@ -8,6 +8,8 @@ var time = 0
 var fever = 0
 var fever_multiplier = 0.15
 var starting_in = 0
+var combo = 0
+var hitTime = 0
 
 var fever_decay = 0.1
 var feverish = false
@@ -23,7 +25,13 @@ func _ready():
 	get_tree().get_root().size_changed.connect(_resize)
 	reset()
 
-func _physics_process(_delta):
+func _physics_process(delta):
+	if hitTime > 0:
+		hitTime -= 0.75*delta
+		print(hitTime)
+	else:
+		hitTime = 0
+		combo = 0
 	if fever >= 100 and not feverish:
 		fever = 100
 	elif fever > 0:
@@ -58,6 +66,8 @@ func _resize():
 func reset():
 	level = 0
 	score = 0
+	combo = 0
+	hitTime = 0
 	lives = default_lives
 	starting_in = default_starting_in
 
@@ -92,7 +102,9 @@ func update_time(t):
 func next_level():
 	level += 1
 	fever = 0
-	get_tree().change_scene_to_file("res://Game.tscn")
+	combo = 0
+	hitTime = 0
+	get_tree().change_scene_to_file("res://game.tscn")
 
 func end_game(success):
 	if success:

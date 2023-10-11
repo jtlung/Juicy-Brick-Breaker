@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bd5m3yq1k5fx8"]
+[gd_scene load_steps=17 format=3 uid="uid://bd5m3yq1k5fx8"]
 
 [ext_resource type="Script" path="res://Brick/Brick_Container.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dmwf8wjdir6y5" path="res://Paddle/Paddle.tscn" id="2"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://r1nm10jeqyta" path="res://UI/Instructions.tscn" id="8"]
 [ext_resource type="Script" path="res://Effects/Fever.gd" id="9"]
 [ext_resource type="Script" path="res://Effects/CameraShake.gd" id="10_7hhad"]
+[ext_resource type="AudioStream" uid="uid://x6ui8sa526ln" path="res://Assets/Music/nocturne.mp3" id="11_tn74w"]
+[ext_resource type="AudioStream" uid="uid://cqpoal481kbkt" path="res://Assets/SFX/magicboing.mp3" id="12_osobv"]
+[ext_resource type="AudioStream" uid="uid://celsiyfvcvf54" path="res://Assets/SFX/compositesound.mp3" id="13_ukikn"]
+[ext_resource type="AudioStream" uid="uid://cxuxardk8rpui" path="res://Assets/SFX/wall.mp3" id="14_ce10j"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(200, 1000)
@@ -84,5 +88,21 @@ visible = false
 [node name="Camera" type="Camera2D" parent="."]
 anchor_mode = 0
 script = ExtResource("10_7hhad")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_tn74w")
+autoplay = true
+
+[node name="boing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_osobv")
+volume_db = -3.714
+
+[node name="crush" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ukikn")
+volume_db = -3.714
+
+[node name="wall" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_ce10j")
+volume_db = -3.714
 
 [connection signal="timeout" from="Fever/Timer" to="Fever" method="_on_Timer_timeout"]

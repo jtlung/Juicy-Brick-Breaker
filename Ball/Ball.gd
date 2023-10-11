@@ -24,10 +24,10 @@ func _ready():
 
 func _on_Ball_body_entered(body):
 	if released:
-		bounceFX()
 		if body.has_method("hit"):
 			body.hit(self)
 			accelerate = true
+		bounceFX()
 			
 func bounceFX():
 	var camera = get_node_or_null("/root/Game/Camera")
@@ -54,6 +54,9 @@ func _input(event):
 			if camera != null:
 				camera.add_trauma(3)
 		apply_central_impulse(initial_velocity)
+		var sfx = get_node_or_null("/root/Game/boing")
+		if sfx != null:
+			sfx.play()
 		released = true
 
 func distort():

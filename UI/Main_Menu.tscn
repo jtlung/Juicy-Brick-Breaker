@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ei3ny6s8bla5"]
+[gd_scene load_steps=4 format=3 uid="uid://ei3ny6s8bla5"]
 
 [ext_resource type="Script" path="res://UI/Main_Menu.gd" id="1"]
 [ext_resource type="Theme" uid="uid://b503imx8hm56x" path="res://UI/main.tres" id="1_i5gp6"]
+[ext_resource type="AudioStream" uid="uid://gopmvij2il3j" path="res://Assets/Music/gymnopedie.mp3" id="3_gei4k"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -58,6 +59,10 @@ offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Quit"
+
+[node name="song" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gei4k")
+autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

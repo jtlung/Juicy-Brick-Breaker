@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dr50duubwf50c"]
 
 [ext_resource type="Script" path="res://Ball/Ball.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://p0uau7icly0b" path="res://Assets/ball_new.png" id="2_2eks4"]
+[ext_resource type="Texture2D" uid="uid://p0uau7icly0b" path="res://Assets/Images/ball_new.png" id="2_8xfkp"]
 
 [sub_resource type="PhysicsMaterial" id="2"]
 friction = 0.0
@@ -22,7 +22,7 @@ shape = SubResource("1")
 [node name="Sprites" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprites"]
-texture = ExtResource("2_2eks4")
+texture = ExtResource("2_8xfkp")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 collide_with_areas = true

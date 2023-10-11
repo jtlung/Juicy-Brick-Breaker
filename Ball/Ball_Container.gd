@@ -3,7 +3,7 @@ extends Node2D
 var Ball = null
 
 func _ready():
-	Ball = load("res://Ball/Ball.tscn")
+	Ball = load("res://Ball/ball.tscn")
 	make_ball()
 
 func _physics_process(_delta):

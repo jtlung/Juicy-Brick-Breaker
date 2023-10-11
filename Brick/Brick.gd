@@ -8,6 +8,9 @@ var powerup_prob = 0.1
 
 func _ready():
 	randomize()
+	var faces = $Faces.get_children()
+	var face = faces[randi_range(0,1-faces.size())]
+	face.show()
 	position = new_position
 
 func _physics_process(_delta):
@@ -20,7 +23,7 @@ func hit(_ball):
 func die():
 	dying = true
 	collision_layer = 0
-	$ColorRect.hide()
+	$Sprite2D.hide()
 	Global.update_score(score)
 	if not Global.feverish:
 		Global.update_fever(score)

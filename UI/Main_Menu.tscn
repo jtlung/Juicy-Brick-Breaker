@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ei3ny6s8bla5"]
+[gd_scene load_steps=3 format=3 uid="uid://ei3ny6s8bla5"]
 
 [ext_resource type="Script" path="res://UI/Main_Menu.gd" id="1"]
+[ext_resource type="Theme" uid="uid://b503imx8hm56x" path="res://UI/main.tres" id="1_i5gp6"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_i5gp6")
 script = ExtResource("1")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -39,6 +41,7 @@ offset_right = 100.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_i5gp6")
 text = "Play"
 
 [node name="Quit" type="Button" parent="."]

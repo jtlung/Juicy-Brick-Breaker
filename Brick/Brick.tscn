@@ -1,18 +1,44 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjvdmnbj44w6x"]
+[gd_scene load_steps=9 format=3 uid="uid://bjvdmnbj44w6x"]
 
 [ext_resource type="Script" path="res://Brick/Brick.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://btvq6f835ubwp" path="res://Assets/brick.png" id="2_5wh5a"]
+[ext_resource type="Texture2D" uid="uid://d3ufsrefsg1pf" path="res://Assets/brick_face1.png" id="3_2gteq"]
+[ext_resource type="Texture2D" uid="uid://duhgti03f6bex" path="res://Assets/brick_face2.png" id="4_1ujjk"]
+[ext_resource type="Texture2D" uid="uid://b5jjl23a05iax" path="res://Assets/brick_face3.png" id="5_asqvw"]
+[ext_resource type="Texture2D" uid="uid://ss3ivq2jo8yj" path="res://Assets/brick_face4.png" id="6_0jyma"]
+[ext_resource type="Texture2D" uid="uid://cirr6ic2g4lyu" path="res://Assets/brick_face5.png" id="7_akfrt"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(90, 30)
+size = Vector2(110, 40)
 
 [node name="Brick" type="StaticBody2D"]
+scale = Vector2(0.9, 0.9)
 script = ExtResource("1")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -45.0
-offset_top = -15.0
-offset_right = 45.0
-offset_bottom = 15.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5wh5a")
+
+[node name="Faces" type="Node2D" parent="."]
+
+[node name="Face1" type="Sprite2D" parent="Faces"]
+visible = false
+texture = ExtResource("3_2gteq")
+
+[node name="Face2" type="Sprite2D" parent="Faces"]
+visible = false
+texture = ExtResource("4_1ujjk")
+
+[node name="Face3" type="Sprite2D" parent="Faces"]
+visible = false
+texture = ExtResource("5_asqvw")
+
+[node name="Face4" type="Sprite2D" parent="Faces"]
+visible = false
+texture = ExtResource("6_0jyma")
+
+[node name="Face5" type="Sprite2D" parent="Faces"]
+visible = false
+texture = ExtResource("7_akfrt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")

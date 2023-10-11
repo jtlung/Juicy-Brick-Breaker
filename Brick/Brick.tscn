@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjvdmnbj44w6x"]
+[gd_scene load_steps=11 format=3 uid="uid://bjvdmnbj44w6x"]
 
 [ext_resource type="Script" path="res://Brick/Brick.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://btvq6f835ubwp" path="res://Assets/brick.png" id="2_5wh5a"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b5jjl23a05iax" path="res://Assets/brick_face3.png" id="5_asqvw"]
 [ext_resource type="Texture2D" uid="uid://ss3ivq2jo8yj" path="res://Assets/brick_face4.png" id="6_0jyma"]
 [ext_resource type="Texture2D" uid="uid://cirr6ic2g4lyu" path="res://Assets/brick_face5.png" id="7_akfrt"]
+[ext_resource type="Texture2D" uid="uid://d2uq1g818au6t" path="res://Assets/deathface.png" id="8_seajk"]
+[ext_resource type="Texture2D" uid="uid://buep7e8sl5cq6" path="res://Assets/brick_worried.png" id="9_st18y"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(110, 40)
@@ -39,6 +41,15 @@ texture = ExtResource("6_0jyma")
 [node name="Face5" type="Sprite2D" parent="Faces"]
 visible = false
 texture = ExtResource("7_akfrt")
+
+[node name="death" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(3, 3)
+texture = ExtResource("8_seajk")
+
+[node name="scared" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("9_st18y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")

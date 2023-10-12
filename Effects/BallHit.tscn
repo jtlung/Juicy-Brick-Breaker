@@ -108,6 +108,7 @@ color_ramp = SubResource("GradientTexture1D_3tj7m")
 
 [node name="BallHit" type="Node2D"]
 process_mode = 1
+modulate = Color(1.5, 1.5, 1.5, 1)
 script = ExtResource("1_cjmdx")
 
 [node name="ring" type="GPUParticles2D" parent="."]

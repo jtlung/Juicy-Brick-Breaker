@@ -14,7 +14,7 @@ func _ready():
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		var level = Levels.levels[Global.level]
-		var song = songs[randi_range(1,songs.size())]
+		var song = songs[randi_range(0,songs.size()-1)]
 		var music = get_node_or_null("/root/Game/music")
 		if music != null:
 			music.stream = song

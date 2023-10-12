@@ -66,6 +66,7 @@ position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("1")
 
 [node name="Launch" type="Sprite2D" parent="."]
+modulate = Color(1.5, 1.5, 1.5, 1)
 
 [node name="pew" type="GPUParticles2D" parent="Launch"]
 position = Vector2(0, -15)

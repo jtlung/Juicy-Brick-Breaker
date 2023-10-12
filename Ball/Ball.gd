@@ -63,6 +63,8 @@ func distort():
 	var scalar = linear_velocity.length()*.0005
 	$Sprites.scale = BaseSize+Vector2(scalar,-scalar)
 	$Sprites.rotation = linear_velocity.angle()-rotation
+	var value = .5+2*linear_velocity.length()/600
+	$Sprites.modulate = Color(value,value,value)
 		
 func _integrate_forces(state):
 	if not released:

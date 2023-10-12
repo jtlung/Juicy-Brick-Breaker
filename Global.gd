@@ -64,7 +64,7 @@ func _resize():
 	VP = get_viewport().size
 
 func reset():
-	level = 3
+	level = 0
 	score = 0
 	combo = 0
 	hitTime = 0
